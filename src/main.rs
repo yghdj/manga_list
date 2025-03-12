@@ -1,4 +1,4 @@
-use data::manga::{Author, Editor};
+use data::manga::{Author, Editor, Manga};
 
 use crate::data::manga::Series;
 
@@ -15,5 +15,14 @@ fn main() {
 
     rave.volume_count = 35;
 
-    println!("{:?}", rave);
+    let rave_volume_1 = Manga::new(
+        &rave,
+        "A new adventure begins!",
+        1,
+        "1999-11-17",
+        "978-4-06-312779-9",
+    );
+
+    println!("{}", rave);
+    println!("Volume 1: {:?}", rave_volume_1);
 }
